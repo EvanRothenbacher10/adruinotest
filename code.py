@@ -25,6 +25,15 @@ def changeColor():
 def setColor():
     cp.pixels[0] = (r, g, b)
     cp.pixels[1] = (copy.copy(r), copy.copy(g), copy.copy(b))
-    cp.pixels[2] = (copy.copy)
 
 changeThread = threading.thread(target= changeColor)
+setThread = threading.thread(target= setColor)
+
+changeThread.start()
+setThread.start()
+
+while True:
+    print(r)
+    time.sleep(0.5)
+    print(g)
+    print(b)
