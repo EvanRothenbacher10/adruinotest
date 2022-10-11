@@ -37,3 +37,32 @@ while True:
     time.sleep(0.5)
     print(g)
     print(b)
+
+
+from adafruit_circuitplayground import cp
+import time
+r = 0
+g = 127
+b = 254
+
+def ChangeColor():
+while True:
+    while r < 255:
+        r = r + 5
+        time.sleep(0.1)
+    if g == 255:
+        while g != 0:
+            g = g + 5
+            time.sleep(0.1)
+    while g < 255:
+        g = g + 5
+        time.sleep(0.1)
+    while r != 0:
+        r = r - 5
+        time.sleep(0.1)
+    while b < 255:
+        b = b + 5
+        time.sleep(0.1)
+    while g < 255:
+        g = g - 5
+        time.sleep(0.1)    
